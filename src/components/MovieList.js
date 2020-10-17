@@ -157,31 +157,31 @@ const MovieList = () => {
                     <table>
                         <tr>
                             <td style={{width: '200px'}}>Title</td>
-                            <td><input type="text" value={input.title} name="title" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><input type="text" value={input.title} name="title" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Description</td>
-                            <td><textarea value={input.description} name="description" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><textarea value={input.description} name="description" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Year</td>
-                            <td><input type="number" value={input.year} name="year" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><input type="number" value={input.year} name="year" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Duration</td>
-                            <td><input type="number" value={input.duration} name="duration" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><input type="number" value={input.duration} name="duration" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Genre</td>
-                            <td><input type="text" value={input.genre} name="genre" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><input type="text" value={input.genre} name="genre" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Rating</td>
-                            <td><input type="number" value={input.rating} name="rating" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><input type="number" value={input.rating} name="rating" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                         <tr>
                             <td>Image URL</td>
-                            <td><textarea value={input.image_url} name="image_url" onChange={changeInput} style={{padding: '5px', width: '300px'}} /></td>
+                            <td><textarea value={input.image_url} name="image_url" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
                     </table>
                     <input type="submit" value="Submit" />
