@@ -9,7 +9,7 @@ const DaftarMovieForm = () => {
         title: '',
         description: '',
         year: '2020',
-        duration: '0',
+        duration: '120',
         genre: '',
         rating: '0',
         review: '',
@@ -100,11 +100,11 @@ const DaftarMovieForm = () => {
                         </tr>
                         <tr>
                             <td>Year</td>
-                            <td><input type="number" value={input.year} name="year" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
+                            <td><input type="number" value={input.year} name="year" onChange={changeInput} style={{padding: '5px', width: '300px'}} min="1980" required/></td>
                         </tr>
                         <tr>
                             <td>Duration</td>
-                            <td><input type="number" value={input.duration} name="duration" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
+                            <td><input type="number" value={input.duration} name="duration" onChange={changeInput} style={{padding: '5px', width: '300px'}} min="1" required/></td>
                         </tr>
                         <tr>
                             <td>Genre</td>
@@ -112,7 +112,7 @@ const DaftarMovieForm = () => {
                         </tr>
                         <tr>
                             <td>Rating</td>
-                            <td><input type="number" value={input.rating} name="rating" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
+                            <td><input type="number" value={input.rating} name="rating" onChange={changeInput} style={{padding: '5px', width: '300px'}} min="0" max="10"required/></td>
                         </tr>
                         <tr>
                             <td>Image URL</td>
