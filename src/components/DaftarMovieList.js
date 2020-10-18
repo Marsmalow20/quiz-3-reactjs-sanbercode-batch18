@@ -1,9 +1,16 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
 import { DaftarMovieContext } from './DaftarMovieContext';
+import { Context } from './../utils/Context';
 
 const DaftarMovieList = () => {
+    const { logins, history } = useContext(Context);
+    const [login] = logins;
+    if (!login) {
+        history.push("/login");
+    }
     const [daftarMovie, setdaftarMovie] = useContext(DaftarMovieContext);
+    const [search, setSearch] = useState("");
 
     useEffect( () => {
         if (daftarMovie.lists === null) {
@@ -44,8 +51,32 @@ const DaftarMovieList = () => {
         setdaftarMovie({...daftarMovie, selectedId: idDataMovie, statusForm: 'changeToEdit'})
     }
 
+    const changeInput = event => {
+        setSearch(event.target.value);
+    }
+
+    const handleSearch = () => {
+        let list = null;
+        if (search !== "") {
+            list = daftarMovie.lists.filter(
+                (data) =>
+                data.title && data.title.toLowerCase().includes(search.toLowerCase())
+            );
+        }
+        setdaftarMovie(list);
+    };
+
     return (
         <>
+            <div style={{backgroundColor: '#FFF', width: '30%', margin: '10px auto', padding: '20px'}}>
+                <div style={{width: '100%', display: 'flex'}}>
+                    <input type="text" name="search" id="search" value={search} onChange={changeInput} style={{width: '75%'}} />
+                    <button type="button" onClick={handleSearch} style={{width: '25%', padding: '10px', justifyContent: 'center', border: '0px', borderRadius: '20px', backgroundColor: '#22AAA1', color: '#FFF'}} >
+                        Search
+                    </button>
+                </div>
+                
+            </div>
             <div style={{backgroundColor: '#FFF', width: '80%', margin: '10px auto', padding: '20px'}}>
                 <h1>Daftar Film</h1>
                 <table>

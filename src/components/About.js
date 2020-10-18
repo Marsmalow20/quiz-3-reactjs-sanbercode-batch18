@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div style={{backgroundColor: '#FFF', width: '80%', margin: '10px auto', padding: '20px'}}>
             <h1>Data Peserta Sanbercode Bootcamp Reactjs</h1>
-            <ol>
+            <ol style={{margin: '10px 0px 0px 50px'}}>
                 <li><b>Nama : </b>Kristoforus David Renaldy</li>
                 <li><b>Email : </b>davidrenaldy1@gmail.com</li>
                 <li><b>Sistem Operasi yang digunakan : </b> Windows 10</li>

@@ -118,8 +118,10 @@ const DaftarMovieForm = () => {
                             <td>Image URL</td>
                             <td><textarea value={input.image_url} name="image_url" onChange={changeInput} style={{padding: '5px', width: '300px'}} required/></td>
                         </tr>
+                        <tr>
+                        <td colSpan='2'><center><input type="submit" value="Submit" style={{padding: '10px 80px', justifyContent: 'center', border: '0px', borderRadius: '20px', backgroundColor: '#22AAA1', color: '#FFF'}} /></center></td>
+                        </tr>
                     </table>
-                    <input type="submit" value="Submit" />
                 </form>
             </div>
         </>
