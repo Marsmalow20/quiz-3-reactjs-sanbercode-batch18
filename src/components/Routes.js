@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router";
 import Home from "./Home";
 import About from "./About";
-import MovieList from "./MovieList";
+import DaftarMovie from "./DaftarMovie";
 
 const Routes = () => {
   return (
@@ -15,7 +15,7 @@ const Routes = () => {
           <About />
         </Route>
         <Route exact path="/movie">
-          <MovieList/>
+          <DaftarMovie/>
         </Route>
         <Route exact path="/login">
           {/* Login */}

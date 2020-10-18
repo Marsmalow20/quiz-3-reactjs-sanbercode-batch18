@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  background-color: transparent;
 }
 
 .App-logo {
@@ -81,4 +81,12 @@ nav ul li a {
 nav ul li a:hover{
   background-color: #292b2c;
   color: #f7f7f7;
+}
+
+td {
+  padding: 10px;
+}
+
+.row-home{
+  background-color: #f2f2f2;
 }
